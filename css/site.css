@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.form-control *{
+    padding: 10px;
+}
+
+.nueva-solicitud{
+    border: 3px solid rgb(161, 208, 251);
+    padding-bottom: 30px;
+    margin-right: 2px;
+    width: 15%;
+    min-width: 220px;
+}
+
+.controles-departamentos{
+    border: 3px solid rgb(161, 208, 251);
+    width: 70%;
+}
+
+.crear-solictud{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.bot-image h2{
+    margin-left: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    color: rgb(172, 217, 246);
+}
+
+.datos-usuario{
+    height: 50px;
+    margin-bottom: 2px;
+    border: 3px solid rgb(161, 208, 251);
+    width: 85.5%;
+    min-width: 710px;
+}
+
+.body-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-usuario ul{
+    display:flex;
+    flex-direction: row;
+}
+
+.datos-usuario ul li{
+    margin-top: 5px;
+    margin-left: 50px;
+    color: darkblue;
+}
+
+.datos-usuarios *{
+    color: rgb(68, 3, 3);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+.header img{
+    width: 40%;
+}
+
+.header h2{
+    width: 40%;
+}
+
+.tabla-datos{
+    display: flex;
+    margin-top: 2px;
+        border: 3px solid rgb(161, 208, 251);
+        width: 85.5%;
+
+}
+
+.tabla-datos table{
+    padding: 20px;
+ }
