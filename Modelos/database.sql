@@ -39,6 +39,7 @@ CREATE TABLE Users(
 );
 
 CREATE TABLE VacacionesDisponibles(
+	idPeriodoAnual int primary key identity not null,
 	periodo_anual int,
 	dias_disponibles INT NOT NULL,
 	usuario varchar(30) NOT NULL
@@ -49,7 +50,6 @@ create table evidencia(
 	IdEvidencia int primary key identity not null,
 	fechaCreacion date
 );
-
 
 create table RecursosEvidencia(
 	IDFoto int identity primary key,
@@ -71,32 +71,93 @@ create table statusSolicitud(
 	descripcion varchar(64)
 );
 
+create table statusfirmas(
+	idStatusFirmas int primary key identity not null,
+	descripcion char(30),
+);
+
+create table tipo_salida(
+	idTipoSalida int identity primary key not null,
+	descripcion varchar(256),
+);
 
 create table solicitud(
 	IdSolicitud int primary key identity not null,
 	solicitante int not null,
 	Descripcion VARCHAR(120) not null,
 	Evidencia int not null,
-	Asset int,
+	tipo_salida int not null,
 	FechaCreacion date not null,
 	FechaCierre date not null,
-	CantBultos int not null,
 	departamento int not null,
 	actividad int not null,
 	statusSolicitud int not null,
-	FirmaSolicitante bit not null,
-	FirmaSupervisor bit not null,
-	FirmaMateriales bit not null,
-	FirmaMantenimiento bit not null,
-	FirmaFinanzas bit not null,
-	FirmaRH bit not null,
-	FirmaDireccion bit not null,
-	FirmaSeguridad bit not null,
-	FirmaSEH bit not null
+	FirmaSolicitante int not null,
+	FirmaSupervisor int not null,
+	FirmaMateriales int not null,
+	FirmaMantenimiento int not null,
+	FirmaFinanzas int not null,
+	FirmaRH int not null,
+	FirmaDireccion int not null,
+	FirmaSeguridad int not null,
+	FirmaSEH int not null,
+	foreign key (tipo_salida) references tipo_salida(idTipoSalida),
 	foreign key (solicitante) references Users(UserId),
 	foreign key (Evidencia) references RecursosEvidencia(IDEvidencia),
 	foreign key (statusSolicitud) references statusSolicitud(idStatus),
-	foreign key (actividad) references actividad(IDActividad)
+	foreign key (actividad) references actividad(IDActividad),
+	foreign key (FirmaSolicitante) references statusfirmas(idStatusFirmas),
+	foreign key (FirmaMateriales) references statusfirmas(idStatusFirmas),
+	foreign key (FirmaMantenimiento) references statusfirmas(idStatusFirmas),
+	foreign key (FirmaFinanzas) references statusfirmas(idStatusFirmas),
+	foreign key (FirmaRH) references statusfirmas(idStatusFirmas),
+	foreign key (FirmaDireccion) references statusfirmas(idStatusFirmas),
+	foreign key (FirmaSeguridad) references statusfirmas(idStatusFirmas),
+	foreign key (FirmaSEH) references statusfirmas(idStatusFirmas),
+);
+
+create table comentarios(
+	idcomentario int not null identity,
+	comentario varchar(512),
+	solicitud int not null
+	foreign key (solicitud) references solicitud(IdSolicitud)
+);
+
+create table layout(
+	noDeDocumento int primary key identity not null,
+	titulo varchar(64),
+	descripcion varchar(512),
+	docVersion char(2),
+	modelo varchar(64),
+	OEMDoc varchar(64),
+	elaborador int,
+	fechaCreacion date,
+	revisionTecnica varchar(8),
+	aprobacion int
+	foreign key (elaborador) references users(UserId),
+	foreign key (aprobacion) references solicitud(IdSolicitud)
+
+)
+
+create table solicitudVacaciones(
+	folio int identity primary key not null,
+	Company int,
+	empleado int not null,
+	dias int not null,
+	periodo int not null,
+	fecha_inicio date not null,
+	semana_pagara int not null,
+	observaciones varchar(256),
+	aprobacion int not null
+	foreign key (empleado) references users(UserId),
+	foreign key (periodo)  references VacacionesDisponibles(idPeriodoAnual),
+	foreign key (aprobacion) references solicitud(IdSolicitud)
 );
 
 
+create table salida_material(
+	idSalida int primary key identity not null,
+	descripcion varchar(256),
+	tipo_salida int not null,
+	foreign key (tipo_salida) references tipo_salida(idTipoSalida)
+);

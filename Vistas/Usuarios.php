@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
 </head>
 
 <body>
     <?php include("../vistas/layout.php"); ?>
     <div class="body-page">
-
-
         <div class="datos-usuario">
             <ul>
                 <li>Nombre: <div class="datos-usuarios"> Javier Castorena </div>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="tabla-datos">
-                <table>
+                <table class="table table-striped">
                     <tr>
                         <td>ID Solicitud</td>
                         <td>Descripcion</td>
@@ -71,7 +71,15 @@
                         <td>Departamento</td>
                         <td>Actividad</td>
                         <td>Estado de solicitud</td>
-                        <td>RH</td>   
+                        <td>Supervisor</td>
+                        <td>Materiales</td>
+                        <td>Mantenimiento</td>
+                        <td>Finanzas</td>
+                        <td>RH</td>
+                        <td>Direccion</td>
+                        <td>Seguridad</td>
+                        <td>SEH</td>
+                        <td></td>   
                     </tr>
                 </table>
         </div>

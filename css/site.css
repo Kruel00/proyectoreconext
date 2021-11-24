@@ -12,20 +12,34 @@
 }
 
 .form-control *{
-    padding: 10px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
 }
 
 .nueva-solicitud{
     border: 3px solid rgb(161, 208, 251);
     padding-bottom: 30px;
     margin-right: 2px;
-    width: 15%;
-    min-width: 220px;
+    width: 18em;
+    min-width: 320px;
 }
 
 .controles-departamentos{
     border: 3px solid rgb(161, 208, 251);
-    width: 70%;
+    width: 77.9%;
 }
 
 .crear-solictud{
@@ -35,18 +49,18 @@
 
 
 .bot-image h2{
-    margin-left: 100px;
+    margin-left: 90px;
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
     color: rgb(172, 217, 246);
 }
 
 .datos-usuario{
-    height: 50px;
+    height: 4em;
     margin-bottom: 2px;
     border: 3px solid rgb(161, 208, 251);
-    width: 85.5%;
-    min-width: 710px;
+    width: 98%;
+    min-width: 300px;
 }
 
 .body-page{
@@ -61,7 +75,7 @@
 
 .datos-usuario ul li{
     margin-top: 5px;
-    margin-left: 50px;
+    margin-left: 30px;
     color: darkblue;
 }
 
@@ -86,10 +100,33 @@
     display: flex;
     margin-top: 2px;
         border: 3px solid rgb(161, 208, 251);
-        width: 85.5%;
-
+        width: 98%;
 }
 
 .tabla-datos table{
     padding: 20px;
  }
+
+ .table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 99%;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
