@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: rgb(243, 248, 250);
 }
 
 .form-control{
@@ -9,6 +10,7 @@
     margin-left: 20px;
     margin-top: 0px;
     margin-right: 10px;
+
 }
 
 .form-control *{
@@ -26,6 +28,7 @@
     appearance: none;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
 }
 
 .form-testo{
@@ -64,6 +67,7 @@
     margin-right: 2px;
     width: 18em;
     min-width: 320px;
+    
 }
 
 
