@@ -100,7 +100,6 @@ create table solicitud(
 	FirmaDireccion int not null,
 	FirmaSeguridad int not null,
 	FirmaSEH int not null,
-	foreign key (tipo_salida) references tipo_salida(idTipoSalida),
 	foreign key (solicitante) references Users(UserId),
 	foreign key (Evidencia) references RecursosEvidencia(IDEvidencia),
 	foreign key (statusSolicitud) references statusSolicitud(idStatus),
@@ -158,5 +157,9 @@ create table salida_material(
 	idSalida int primary key identity not null,
 	descripcion varchar(256),
 	tipo_salida int not null,
+	solicitante int not null,
+	aprobacion int not null
+	foreign key (aprobacion) references solicitud(IdSolicitud),	
+	foreign key (solicitante) references users(UserId),
 	foreign key (tipo_salida) references tipo_salida(idTipoSalida)
 );
