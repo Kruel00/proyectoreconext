@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="form-control">
-                        <input type="submit" value="Crear Nueva">
+                        <input type="submit" value="Crear">
                     </div>
             </div>
 
