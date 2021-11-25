@@ -1,23 +1,23 @@
-CREATE TABLE cCompany(
+CREATE TABLE Company(
 	CompanyId INT PRIMARY KEY IDENTITY, 
 	CompanyName CHAR(80) NOT NULL,
 	Adress CHAR(200) NOT NULL,
 	Phone CHAR(14) NOT NULL
 );
 
-CREATE TABLE cDepartament(
+CREATE TABLE Departamento(
 	DepartamentId INT PRIMARY KEY NOT NULL IDENTITY,
 	DepartamentName varchar(40) NOT NULL,
 );
 
-CREATE TABLE cPuesto(
+CREATE TABLE Puesto(
 	PuestoID INT PRIMARY KEY NOT NULL IDENTITY,
 	Descripcion VARCHAR(60) NOT NULL
 );
 
-create table cUserRole(
+create table UserRole(
 	RoleID int identity primary key not null,
-	Description varchar(30)
+	Descripcion varchar(30)
 );
 
 CREATE TABLE Users(
@@ -52,9 +52,9 @@ create table evidencia(
 );
 
 create table RecursosEvidencia(
-	IDFoto int identity primary key,
+	IdEvidencia int identity primary key,
 	RutaEvidencia nvarchar(1000) not null,
-	IDEvidencia int UNIQUE not null
+	FKIDEvidencia int UNIQUE not null
 	foreign key (IDEvidencia) references evidencia(IdEvidencia)
 );
 
@@ -123,7 +123,6 @@ create table comentarios(
 
 create table layout(
 	noDeDocumento int primary key identity not null,
-	titulo varchar(64),
 	descripcion varchar(512),
 	docVersion char(2),
 	modelo varchar(64),
