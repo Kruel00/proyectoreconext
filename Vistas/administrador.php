@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/site.css">
-
 </head>
 
 <body>
-    <?php include("../vistas/layout.php"); ?>
+    <?php include("../vistas/layout.php");
+    ?>
+    
     <div class="body-page">
         <div class="datos-usuario">
             <ul>
@@ -29,7 +30,10 @@
         <div class="crear-solictud">
             <div class="nueva-solicitud">
                 <form action="" method="POST">
-
+                    <div class="form-control">
+                        <label for="">Solicitante</label>
+                        <input type="text" placeholder="Numero de empleado">
+                    </div>
                     <div class="form-control">
                         <label for="slct_departamento">Seleccione Departamento</label>
                         <Select>
@@ -47,7 +51,7 @@
                     </div>
 
                     <div class="form-control">
-                        <input type="submit" value="Crear">
+                        <input type="submit" value="Crear" value="Enviar solicitud">
                     </div>
             </div>
 
@@ -108,7 +112,7 @@
                 </div>
 
                 <div class="form-control">
-                    <input type="submit">
+                    <input type="submit" value="Enviar">
                 </div>
             </div>
             </div>
@@ -127,6 +131,8 @@
                         <td>Actividad</td>
                         <td>Estado de solicitud</td>
                         <td>Estado de aprobacion</td>
+                        <td>Accion</td>
+                        <td>Accion</td>
                     </tr>
 
                     <tr align="center">
@@ -139,7 +145,8 @@
                         <td>Salida de carton</td>
                         <td>Pendiente de aprobacion</td>
                         <td><a href="">Ver</a></td>
-
+                        <td><a href="">Editar</a></td>
+                        <td><a href="">Borrar</a></td>
                     </tr>
                     <tr align="center">
                         <td>2</td>
@@ -151,6 +158,8 @@
                         <td>Solicitud de vacaciones</td>
                         <td>Pendiente de aprobacion</td>
                         <td><a href="">Ver</a></td>
+                        <td><a href="">Editar</a></td>
+                        <td><a href="">Borrar</a></td>
 
                     </tr>
 

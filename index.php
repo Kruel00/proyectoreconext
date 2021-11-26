@@ -9,7 +9,7 @@
 <body>
 <?php include("vistas/layout.php");?>
     <ul>
-        <li><a href="vistas/Adminstrador.php">Administrador</a></li>
+        <li><a href="vistas/Administrador.php">Administrador</a></li>
         <li><a href="vistas/Directivos.php">Directivos</a></li>
         <li><a href="vistas/Usuarios.php">Usuarios</a></li>
     </ul>
