@@ -32,10 +32,10 @@ CREATE TABLE Users(
 	Departamento INT,
 	Puesto INT,
 	UserRole int,
-	foreign key (Company) references cCompany(CompanyId) ON DELETE CASCADE,
-	foreign key (Departamento) references cDepartament(DepartamentId) ON DELETE CASCADE,
-	foreign key (Puesto) references cPuesto(PuestoID) ON DELETE CASCADE,
-	foreign key (UserRole) references cUserRole(RoleID) ON DELETE CASCADE
+	foreign key (Company) references Company(CompanyId) ON DELETE CASCADE,
+	foreign key (Departamento) references Departamento(DepartamentId) ON DELETE CASCADE,
+	foreign key (Puesto) references Puesto(PuestoID) ON DELETE CASCADE,
+	foreign key (UserRole) references UserRole(RoleID) ON DELETE CASCADE
 );
 
 CREATE TABLE VacacionesDisponibles(
@@ -62,7 +62,7 @@ create table actividad(
 	IDActividad int primary key identity not null,
 	descripcion varchar(256),
 	departamento int not null
-	foreign key (departamento) references cDepartament(DepartamentId)
+	foreign key (departamento) references Departamento(DepartamentId)
 );
 
 
