@@ -1,34 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: rgb(243, 248, 250);
+    box-sizing: border-box;
 }
 
 .form-control{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-top: 0px;
-    margin-right: 10px;
-
-}
-
-.form-control *{
-    display: block;
-    width: 220px;
-    padding: .375rem .75rem;
-    font-size: 15px;
-    font-weight: 200px;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
+    align-items: center;
 }
 
 .form-testo{
@@ -57,7 +36,10 @@
     margin-bottom: 10px;
 }
 
-
+.format-area{
+height: 500px;
+width: 500px;
+}
 
 .nueva-solicitud {
     display: flex;
@@ -69,8 +51,6 @@
     min-width: 320px;
     
 }
-
-
 
 .controles-departamentos{
     display: flex;
@@ -183,4 +163,9 @@ table {
 table tr td{
     border: 2px solid rgb(161, 208, 251);
 
+}
+
+.form-control-group{
+    display: flex;
+    flex-direction: row;
 }

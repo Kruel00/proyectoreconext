@@ -1,13 +1,13 @@
 CREATE TABLE Company(
 	CompanyId INT PRIMARY KEY IDENTITY, 
 	CompanyName CHAR(80) NOT NULL,
-	Adress CHAR(200) NOT NULL,
+	CompanyAddress CHAR(200) NOT NULL,
 	Phone CHAR(14) NOT NULL
 );
 
 CREATE TABLE Departamento(
-	DepartamentId INT PRIMARY KEY NOT NULL IDENTITY,
-	DepartamentName varchar(40) NOT NULL,
+	DepartamentoId INT PRIMARY KEY NOT NULL IDENTITY,
+	$NombreDepartamento varchar(40) NOT NULL,
 );
 
 CREATE TABLE Puesto(
@@ -76,7 +76,7 @@ create table statusfirmas(
 	descripcion char(30),
 );
 
-create table tipo_salida(
+create table tipoSalida(
 	idTipoSalida int identity primary key not null,
 	descripcion varchar(256),
 );
@@ -142,8 +142,8 @@ create table solicitudVacaciones(
 	empleado int not null,
 	dias int not null,
 	periodo int not null,
-	fecha_inicio date not null,
-	semana_pagara int not null,
+	fechaInicio date not null,
+	semanaPagara int not null,
 	observaciones varchar(256),
 	aprobacion int not null
 	foreign key (empleado) references users(UserId),
@@ -152,10 +152,10 @@ create table solicitudVacaciones(
 );
 
 
-create table salida_material(
+create table salidaMaterial(
 	idSalida int primary key identity not null,
 	descripcion varchar(256),
-	tipo_salida int not null,
+	tipoSalida int not null,
 	solicitante int not null,
 	aprobacion int not null
 	foreign key (aprobacion) references solicitud(IdSolicitud),	

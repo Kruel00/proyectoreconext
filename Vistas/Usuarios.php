@@ -29,7 +29,6 @@
         <div class="crear-solictud">
             <div class="nueva-solicitud">
                 <form action="" method="POST">
-
                     <div class="form-control">
                         <label for="slct_departamento">Seleccione Departamento</label>
                         <Select>
@@ -49,55 +48,57 @@
                     <div class="form-control">
                         <input type="submit" value="Crear">
                     </div>
+                </form>
             </div>
-
-
-           
-<h2>Solicitudes pendientes</h2>
-
-            <div class="tabla-datos">
-                <table class="table table-striped">
-                    <tr align="center">
-                        <td>ID Solicitud</td>
-                        <td>Descripcion</td>
-                        <td>Evidencia</td>
-                        <td>Tipo de salida</td>
-                        <td>Fecha</td>
-                        <td>Departamento</td>
-                        <td>Actividad</td>
-                        <td>Estado de solicitud</td>
-                        <td>Estado de aprobacion</td>
-                    </tr>
-
-                    <tr align="center">
-                        <td>1</td>
-                        <td>Envio de carton a recicladora</td>
-                        <td><a href="">Ver</a></td>
-                        <td>Salida de material</td>
-                        <td>2021-11-29</td>
-                        <td>Seguridad Patrimonial</td>
-                        <td>Salida de carton</td>
-                        <td>Pendiente de aprobacion</td>
-                        <td><a href="">Ver</a></td>
-
-                    </tr>
-                    <tr align="center">
-                        <td>2</td>
-                        <td>Aprobacion de vacaciones</td>
-                        <td><a href="">Ver</a></td>
-                        <td>Vacaciones </td>
-                        <td>2021-11-29</td>
-                        <td>Recursos Humanos</td>
-                        <td>Solicitud de vacaciones</td>
-                        <td>Pendiente de aprobacion</td>
-                        <td><a href="">Ver</a></td>
-
-                    </tr>
-
-                </table>
+            <div class="area-formatos">
+                <?php include("../Vistas/formatos/seguridad_patrimonial/pase_de_salida.php");?>
             </div>
-
         </div>
+        <div class="area-soicitudes-pendientes">
+        <br>
+        <h2>Solicitudes pendientes de aprobacion</h2>
+                    <table class="table table-striped">
+                        <tr align="center">
+                            <td>ID Solicitud</td>
+                            <td>Descripcion</td>
+                            <td>Evidencia</td>
+                            <td>Tipo de salida</td>
+                            <td>Fecha</td>
+                            <td>Departamento</td>
+                            <td>Actividad</td>
+                            <td>Estado de solicitud</td>
+                            <td>Estado de aprobacion</td>
+                        </tr>
+
+                        <tr align="center">
+                            <td>1</td>
+                            <td>Envio de carton a recicladora</td>
+                            <td><a href="">Ver</a></td>
+                            <td>Salida de material</td>
+                            <td>2021-11-29</td>
+                            <td>Seguridad Patrimonial</td>
+                            <td>Salida de carton</td>
+                            <td>Pendiente de aprobacion</td>
+                            <td><a href="">Ver</a></td>
+
+                        </tr>
+                        <tr align="center">
+                            <td>2</td>
+                            <td>Aprobacion de vacaciones</td>
+                            <td><a href="">Ver</a></td>
+                            <td>Vacaciones </td>
+                            <td>2021-11-29</td>
+                            <td>Recursos Humanos</td>
+                            <td>Solicitud de vacaciones</td>
+                            <td>Pendiente de aprobacion</td>
+                            <td><a href="">Ver</a></td>
+
+                        </tr>
+                    </table>
+        </div>
+
+
+    </div>
 </body>
 
 </html>
