@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,36 @@
     <title>Document</title>
 </head>
 <body>
-<?php include("vistas/layout.php");?>
-    <ul>
-        <li><a href="vistas/Administrador.php">Administrador</a></li>
-        <li><a href="vistas/Directivos.php">Directivos</a></li>
-        <li><a href="vistas/Usuarios.php">Usuarios</a></li>
-    </ul>
+    <div class="login-area">
+        <div class="form-area">
+            <form action="/Controladores/user_controller.php" method="POST">
+                <div class="form-header">
+                </div>
+                <div class="fomr-controls">
+                    <div class="form-control">
+                        <label for="txt_user">Usuario</label>
+                        <input type="text" name="username" placeholder="Usuario de dominio">
+                    </div>
+                    <div class="form-control">
+                        <label for="txt_pass">Contraseña</label>
+                        <input type="password" name="passwd" placeholder="Contraseña">
+                    </div>
+                    <div class="form-control">
+                        <input type="submit" name="entrar" Value="Entrar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
+<?php
+if (@$_GET['passwordfail'] == 'true') {
+    echo "<br> contraseña incorrecta";
+}
+
+if (@$_GET['usuarioActivo'] == 'false') {
+    echo "<br> Usuario inactivo, Cantacte a IT Support";
+}
+
+?>
 </html>

@@ -1,6 +1,4 @@
 <html>
-<div class="top-banner">
-</div>
 <div class="body-format">
     <div class="form-area">
         <form action="">
@@ -28,21 +26,21 @@
 
 
             <div class="form-control-group">
-                <div clas="form-control">
+
+                <div class="form-control">
                     <input type="text" name="txt_nombre" id="txt_nombre">
-                    <label for="txt_nombre">Nombre:</label>
+                    <label for="txt_nombre">Nombre</label>
                 </div>
 
                 <div class="form-control">
                     <input type="text" name="txt_num_empleado" id="txt_num_empleado">
-                    <label for="txt_num_empleado">Numero de empleado:</label>
+                    <label for="txt_num_empleado">Numero de empleado</label>
                 </div>
 
                 <div class="form-control">
                     <input type="text" name="txt_departamento" id="txt_departamento">
-                    <label for="txt_departamento">Deprtamento:</label>
+                    <label for="txt_departamento">Deprtamento</label>
                 </div>
-
             </div>
 
 
@@ -51,7 +49,7 @@
 
                 <div class="form-control">
                     <input type="date" name="dt_fecha" id="dt_fecha">
-                    <label for="dt_fecha">Fecha:</label>
+                    <label for="dt_fecha">Fecha</label>
                 </div>
 
                 <div class="form-control">
@@ -61,7 +59,7 @@
 
                 <div class="form-control">
                     <input type="text" name="txt_pllanta" id="txt_pllanta">
-                    <label for="txt_planta">Planta:</label>
+                    <label for="txt_planta">Planta</label>
                 </div>
             </div>
 
@@ -92,7 +90,7 @@
                     </tr>
                 </table>
             </div>
-            <br>
+
             <div class="form-control-group">
                 <div class="form-control">
                     <textarea name="txtarea_justificacion" id="txtarea_justificacion" cols="30" rows="2"></textarea>
@@ -103,10 +101,12 @@
                     <label for="txt_provedor">Proveedor: </label>
                 </div>
             </div>
+
+            <div class="form-control-group">
+                <input type="submit" value="Crear">
+            </div>
+        </form>
     </div>
-</div>
-</form>
-</div>
 </div>
 
 </html>

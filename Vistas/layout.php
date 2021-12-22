@@ -10,14 +10,9 @@
     <div class="header">
         <img src="../img/company_logo_big.png" alt="">
         <div class="bot-image" >
-        <h2>REUSE 100% OF ALL MATERIALS</h2>
         </div>
         
         <br>
-    </div>
-
-    <div class="top-menu">
-        <h1>holaaa karosha</h1>
     </div>
 
     <div class="footer">

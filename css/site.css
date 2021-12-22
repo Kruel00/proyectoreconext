@@ -168,4 +168,5 @@ table tr td{
 .form-control-group{
     display: flex;
     flex-direction: row;
+    margin: 20px;
 }

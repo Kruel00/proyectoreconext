@@ -133,8 +133,14 @@
 
     class salidaMaterial{
         public $idSalida;
+        public $tipoSalida;
+        public $numControl;
+        public $numFolio;
+        public $fechaSalida;
+        public $planta;
+        public $cantidad;
         public $descripcion;
-        public $tipSalida;
+        public $proveedor;
         public $solicitante;
         public $aprobacion;
     }

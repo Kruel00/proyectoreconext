@@ -7,7 +7,7 @@ CREATE TABLE Company(
 
 CREATE TABLE Departamento(
 	DepartamentoId INT PRIMARY KEY NOT NULL IDENTITY,
-	$NombreDepartamento varchar(40) NOT NULL,
+	NombreDepartamento varchar(40) NOT NULL,
 );
 
 CREATE TABLE Puesto(
@@ -24,8 +24,8 @@ CREATE TABLE Users(
 	UserId int UNIQUE NOT NULL IDENTITY,
 	UserName varchar(30) primary key,
 	UserPassword varchar(60) not null,
-	NumEmpleado int NOT NULL,
-	nobre CHAR(40) NOT NULL,
+	NumEmpleado varchar(15) NOT NULL,
+	nombre CHAR(40) NOT NULL,
 	apellido CHAR(50) NOT NULL,
 	Email VARCHAR(60),
 	Company INT,
@@ -33,7 +33,7 @@ CREATE TABLE Users(
 	Puesto INT,
 	UserRole int,
 	foreign key (Company) references Company(CompanyId) ON DELETE CASCADE,
-	foreign key (Departamento) references Departamento(DepartamentId) ON DELETE CASCADE,
+	foreign key (Departamento) references Departamento(DepartamentoId) ON DELETE CASCADE,
 	foreign key (Puesto) references Puesto(PuestoID) ON DELETE CASCADE,
 	foreign key (UserRole) references UserRole(RoleID) ON DELETE CASCADE
 );
@@ -62,7 +62,7 @@ create table actividad(
 	IDActividad int primary key identity not null,
 	descripcion varchar(256),
 	departamento int not null
-	foreign key (departamento) references Departamento(DepartamentId)
+	foreign key (departamento) references Departamento(DepartamentoId)
 );
 
 
@@ -154,11 +154,22 @@ create table solicitudVacaciones(
 
 create table salidaMaterial(
 	idSalida int primary key identity not null,
-	descripcion varchar(256),
 	tipoSalida int not null,
+	numControl varchar(64),
+	numFolio varchar(64),
+	fechaSalida datetime,
+	planta varchar(64),
+	cantidad int,
+	descripcion varchar(256),
+	proveedor varchar(128),
 	solicitante int not null,
 	aprobacion int not null
 	foreign key (aprobacion) references solicitud(IdSolicitud),	
 	foreign key (solicitante) references users(UserId),
-	foreign key (tipo_salida) references tipo_salida(idTipoSalida)
+	foreign key (tipoSalida) references tipoSalida(idTipoSalida)
 );
+
+insert into company values ( 'Reconext', 'Calz. Manuel Gómez Morín 569, 21394 Mexicali, B.C.', '686 159 3100')
+insert into userrole values ('Usuario')
+insert into userrole values ('Directivo')
+insert into userrole values ('Administrador')
