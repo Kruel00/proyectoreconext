@@ -12,7 +12,7 @@
 <body>
     <?php include("../vistas/layout.php");
     ?>
-    
+
     <div class="body-page">
         <div class="datos-usuario">
             <ul>
@@ -55,7 +55,6 @@
                     </div>
             </div>
 
-
             <div class="controles-departamentos">
                 <h2>Formato Vacaciones</h2>
 
@@ -93,7 +92,6 @@
                         <input type="date">
                     </div>
                 </div>
-
 
                 <div class="controles-area">
                     <div class="form-control">
@@ -165,7 +163,10 @@
 
                 </table>
             </div>
-
+        <?php 
+            session_start();
+            
+        ?>
         </div>
 </body>
 

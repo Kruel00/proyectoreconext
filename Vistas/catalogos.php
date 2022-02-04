@@ -12,7 +12,7 @@
     <h1>Registro de usuarios</h1>
     <br>
     <form action="" method="post">
-        <label for="">Numero de empleado</label>
+        <label for="">Empleado</label>
         <input type="text" focused name="txtNumempleado">
     </form>
     <?php
@@ -37,7 +37,6 @@
 
     $bind = @ldap_bind($connection, $username . $domain, $password);
     $distinguished_name = "DC=valuout,DC=com";
-
     //$filter = "(|(employeenumber=$numEmpleado))";
     $filter = "(|(samaccountname=$numEmpleado))";
     $search = ldap_search($connection, $distinguished_name, $filter);
@@ -104,6 +103,7 @@
     </div>
 
     <?php
+
     function regcampos($con, $datosUsuario)
     {
         $depa = $datosUsuario['departamento'];
@@ -126,6 +126,7 @@
             $resultp = sqlsrv_query($con, $consultp);
         }
     }
+
     function regUser($con, $datosUsuario)
     {
         $usuario = $datosUsuario['usuariodominio'];
@@ -149,6 +150,11 @@
         $consultSaveUser = "insert into users values ('$usuario',' ','$numEmpleado','$nombre','$apellido','$mail',1,$departamento,$puesto,1 )";
         $saveuser = sqlsrv_query($con, $consultSaveUser);
     }
+
+    function crearSession(){
+        
+    }
+
     ?>
 
 </body>
